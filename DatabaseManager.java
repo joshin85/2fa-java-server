@@ -72,8 +72,9 @@ Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/use
             Statement stat = myConn.createStatement();
             ResultSet res = stat.executeQuery("SELECT * FROM tokenRequests WHERE tokenRequests.phone='" + phone + "';");
             String retVal = "";
-	    int itter = 1;
+	    int itter = 0;
             while(res.next()){
+		itter++;
                 retVal += res.getString("email") + " , " + res.getString("phone");
             }
             return Integer.toString(itter);

@@ -23,7 +23,7 @@ class ThreadHandler extends Thread {
 				running = false;
 			}			
 		}	
-		sleep(5000);
+		sleep(1000);
 		}}
 	catch(Exception e){
 e.printStackTrace();
@@ -97,7 +97,7 @@ public static String updateDb(String email, String phone){
 }
 
 public String createConnection(String phone){
-System.out.println("Conncetion beting testing " + phone);
+//System.out.println("Conncetion beting testing " + phone);
 try{	
 if(newsock.isClosed()){
 	return "closed";
